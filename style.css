@@ -1,0 +1,62 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: darkgray;
+}
+.container {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh; /* in order that everithing that is in the container to be centered, it need to make 
+						that we mention that the items has to take 100 of the viewport height */
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px); /* we mentioned for the display a minimum of 120px 
+				and a maximmum of auto, that is because we toked into consideration that the display to enlarge if a
+				large number is inserted */
+				gap: 8px;
+}
+.container button{
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid white;
+	background-color: lightgrey;
+	outline: none;
+	border-radius: 20px;
+	box-shadow: 6px 6px 0px black;
+	border-color: black;
+}
+.container button:hover{
+	background-color: white;
+}
+.doubleSize{
+grid-column: span 2;
+}
+.display {
+	grid-column: 1 / 5;
+	background-color: ghostwhite;
+	border-radius: 20px;
+	box-shadow: 6px 6px 0px black;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	justify-content: space-around;	
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.display .previsous-operand {
+font-size: 1.5rem;
+font-weight: 100;
+}
+.display .current-operand {
+font-size: 2.5rem;
+font-weight: 300;
+}
+
+
+
+
